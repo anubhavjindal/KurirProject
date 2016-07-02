@@ -92,6 +92,11 @@ public class ProfileActivity extends BaseAuthenticatedActivity implements View.O
 
     }
 
+    @Subscribe
+    public void onUserDetailsUpdated(Account.UserDetailUpdateEvent event){
+        getSupportActionBar().setTitle(event.User.getDisplayName());
+    }
+
     @Override
     protected void onSaveInstanceState(Bundle savedState) {
         super.onSaveInstanceState(savedState);

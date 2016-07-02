@@ -29,6 +29,8 @@
         <activity android:name=".activities.ContactsActivity"/>
 
         <activity android:name=".activities.SentMessagesActivity"/>
+
+        <activity android:name=".activities.AuthenticationActivity"/>
         
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
 

@@ -42,6 +42,12 @@ public class NavDrawer {
                 setOpen(!isOpen());
             }
         });
+
+        activity.getKurirApplication().getBus().register(this);
+    }
+
+    public void destroy(){
+        activity.getKurirApplication().getBus().unregister(this);
     }
 
     public void addItem(NavDrawerItem item) {

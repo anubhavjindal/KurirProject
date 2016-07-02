@@ -13,6 +13,8 @@ import com.anubhavj.kurir.activities.MainActivity;
 import com.anubhavj.kurir.activities.ProfileActivity;
 import com.anubhavj.kurir.activities.SentMessagesActivity;
 import com.anubhavj.kurir.infrastructure.User;
+import com.anubhavj.kurir.services.Account;
+import com.squareup.otto.Subscribe;
 
 public class MainNavDrawer extends NavDrawer {
 
@@ -30,7 +32,7 @@ public class MainNavDrawer extends NavDrawer {
         addItem(new BasicNavDrawerItem("Logout",null,R.drawable.ic_backspace,R.id.include_main_nav_drawer_bottomItems) {
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, "You have been logged out!", Toast.LENGTH_SHORT).show();
+                activity.getKurirApplication().getAuth().logout();
             }
         });
 
@@ -41,5 +43,11 @@ public class MainNavDrawer extends NavDrawer {
         displayNameText.setText(loggedInUser.getDisplayName());
 
         // TODO: change avatarImage to avatarUrl from loggedInUser
+    }
+
+    @Subscribe
+    public void onUserDetailsUpdated(Account.UserDetailUpdateEvent event){
+        //TODO: Update Avatar URL
+        displayNameText.setText(event.User.getDisplayName());
     }
 }
