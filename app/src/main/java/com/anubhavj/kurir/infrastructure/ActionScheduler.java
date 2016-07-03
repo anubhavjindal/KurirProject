@@ -4,7 +4,6 @@ import android.os.Handler;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 
 public class ActionScheduler {
 
@@ -77,7 +76,7 @@ public class ActionScheduler {
         postEveryMilliseconds(request,milliseconds,true);
     }
 
-    public void postEveryMilliseconds(final Objects request, long milliseconds, boolean postImmediately) {
+    public void postEveryMilliseconds(final Object request, long milliseconds, boolean postImmediately) {
 
         invokeEveryMilliseconds(new Runnable() {
             @Override
