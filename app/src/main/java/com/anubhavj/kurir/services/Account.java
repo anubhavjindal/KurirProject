@@ -145,7 +145,6 @@ public static class LoginWithLocalTokenResponse extends  UserResponse {
 
     public static class UserDetailUpdateEvent {
         public User User;
-
         public UserDetailUpdateEvent(com.anubhavj.kurir.infrastructure.User user) {
             User = user;
         }

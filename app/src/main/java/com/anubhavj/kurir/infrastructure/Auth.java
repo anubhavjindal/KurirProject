@@ -48,7 +48,6 @@ public class Auth {
 
     public void logout() {
         setAuthToken(null);
-
         Intent loginIntent = new Intent(context, LoginActivity.class);
         loginIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(loginIntent);
