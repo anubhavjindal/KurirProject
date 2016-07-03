@@ -35,7 +35,7 @@ public class Auth {
     }
 
     public boolean hasAuthToken() {
-        return authToken != null && !authToken.isEmpty();
+        return ((authToken != null) && (!authToken.isEmpty()));
     }
 
     public void setAuthToken(String authToken) {
