@@ -128,9 +128,9 @@ public class InMemoryAccountService extends BaseInMemoryService{
         Auth auth = application.getAuth();
         User user = auth.getUser();
 
-        user.setDisplayName("UdgeethAggarwal");
-        user.setUserName("UdgeethAggarwal");
-        user.setEmail("udgeeth96@gmail.com");
+        user.setDisplayName("Anubhav Jindal");
+        user.setUserName("AnubhavJindal");
+        user.setEmail("anubhavskjindal@gmail.com");
         user.setAvatarUrl("http://www.gravatar.com/avatar/1?d=identicon");
         user.setIsLoggedIn(true);
         user.setId(123);
