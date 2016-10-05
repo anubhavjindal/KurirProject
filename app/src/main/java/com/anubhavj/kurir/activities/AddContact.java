@@ -12,3 +12,6 @@ public class AddContact extends BaseAuthenticatedActivity {
         setContentView(R.layout.activity_add_contact);
     }
 }
+
+
+Bhoomika
