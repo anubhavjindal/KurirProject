@@ -8,6 +8,6 @@
     <color name="list_item_nav_drawer_selected_item_text_color">#2196F3</color>
     <color name="contacts_pending_contact_requests">#607D8B</color>
     <color name="list_item_message_background_selected">#8C9EFE</color>
-    <color name="list_item_message_background">#eee</color>
+    <color name="list_item_message_background">#EEE</color>
     <color name="list_item_message_background_unread">#FFF2CF</color>
 </resources>

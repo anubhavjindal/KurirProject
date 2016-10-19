@@ -1,14 +1,16 @@
 package com.anubhavj.kurir.services.entities;
 
-/**
- * Created by Bhoomika_2 on 06-10-2016.
- */
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.Calendar;
 
-public class Message implements Parcelable {
+/**
+ * Created by anubhavj on 19/10/16.
+ */
+
+public class Message implements Parcelable{
+
     private int id;
     private Calendar createdAt;
     private String shortMessage;
@@ -19,11 +21,9 @@ public class Message implements Parcelable {
     private boolean isRead;
     private boolean isSelected;
 
-
     public Message(int id,
                    Calendar createdAt,
                    String shortMessage,
-
                    String longMessage,
                    String imageUrl,
                    UserDetails otherUser,
@@ -40,7 +40,6 @@ public class Message implements Parcelable {
     }
 
     public int getId() {
-
         return id;
     }
 
@@ -76,8 +75,8 @@ public class Message implements Parcelable {
         return isSelected;
     }
 
-    public void setIsSelected(boolean isSelected) {
-        this.isSelected = isSelected;
+    public void setSelected(boolean selected) {
+        isSelected = selected;
     }
 
     @Override
@@ -86,24 +85,19 @@ public class Message implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
+    public void writeToParcel(Parcel parcel, int i) {
 
     }
 
     public static final Creator<Message> CREATOR = new Creator<Message>() {
-
-        public Message createFromParcel(Parcel source) {
+        @Override
+        public Message createFromParcel(Parcel parcel) {
             return null;
-
         }
 
         @Override
-        public Message[] newArray(int size) {
+        public Message[] newArray(int i) {
             return new Message[0];
         }
     };
 }
-
-
-
-
