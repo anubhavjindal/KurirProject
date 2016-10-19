@@ -6,5 +6,6 @@ public class Module {
     public static void register(KurirApplication application){
         new InMemoryAccountService(application);
         new InMemoryContactsService(application);
+        new InMemoryMessagesService(application);
     }
 }
