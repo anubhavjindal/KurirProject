@@ -16,7 +16,7 @@ import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 
-public class SentMessagesActivity extends BaseAuthenticatedActivity {
+public class SentMessagesActivity extends BaseAuthenticatedActivity implements MessagesAdapter.OnMessageClickedListener {
 
     private static final int REQUEST_VIEW_MESSAGE = 1;
 
@@ -34,7 +34,8 @@ public class SentMessagesActivity extends BaseAuthenticatedActivity {
         getSupportActionBar().setTitle("Sent Messages");
 
 
-        adapter = new MessagesAdapter(this, (MessagesAdapter.OnMessageClickedListener) this);
+
+        adapter = new MessagesAdapter(this, this);
         messages = adapter.getMessages();
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.activity_sent_messages_messages);
@@ -54,7 +55,7 @@ public class SentMessagesActivity extends BaseAuthenticatedActivity {
 
     }
 
-    //@Override - should be there in BaseAuthenticatedActivity.java
+    @Override
     public void onMessageClicked(Message message) {
         Intent intent = new Intent(this, MessageActivity.class);
         intent.putExtra(MessageActivity.EXTRA_MESSAGE, message);
